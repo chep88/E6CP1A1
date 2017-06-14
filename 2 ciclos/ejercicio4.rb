@@ -14,5 +14,4 @@ a.times do
   b = b << "<li> hola </li>\n"
 end
 b = "<ul>\n"<< b << '</ul>'
-
 puts b
