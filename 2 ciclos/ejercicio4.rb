@@ -11,6 +11,8 @@ a = 5
 b = ''
 
 a.times do
-  b = '<li> hola </li>'
+  b = b << "<li> hola </li>\n"
 end
+b = "<ul>\n"<< b << '</ul>'
 
+puts b
