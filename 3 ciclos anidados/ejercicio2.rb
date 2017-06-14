@@ -24,3 +24,24 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
+def pintaTd(numeroInicial, numeroFin)
+td=""
+  (numeroInicial..numeroFin).each do |i|
+    td = td << "<td> #{i} </td>\n"
+  end
+  return td
+end
+
+def pintaTr(numeroTr, numeroTd)
+  tr =""
+  (1..numeroTr).each do |x|
+    tr = tr << "<tr>\n" << pintaTd((numeroTd*x)-(numeroTd-1),numeroTd*x) << "</tr>\n"
+  end
+  return tr
+end
+
+inicioTabla = "<table>\n<tbody>\n"
+
+finTabla = "<tbody>\n<table>\n"
+
+puts inicioTabla + pintaTr(3,4) + finTabla
